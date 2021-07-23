@@ -1,4 +1,5 @@
 import MeetupList from '../components/meetups/MeetupList';
+import Layout from '../components/layout/Layout';
 
 const DUMMY_MEETUPS = [
   {
@@ -13,14 +14,18 @@ const DUMMY_MEETUPS = [
     id: 'm2',
     title: 'A Second Meetup',
     image:
-      'https://images.unsplash.com/photo-1592427161906-c1db4ba75bc0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    address: '201 E Randolph St, Chicago, IL 60602',
+      'https://images.unsplash.com/photo-1502021680532-838cfc650323?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1351&q=80',
+    address: 'Trolltunga, Norway',
     description: 'This is a second MeetUp!',
   },
 ];
 
 function HompePage() {
-  return <MeetupList meetups={DUMMY_MEETUPS} />;
+  return (
+    <Layout>
+      <MeetupList meetups={DUMMY_MEETUPS} />
+    </Layout>
+  );
 }
 
 export default HompePage;
