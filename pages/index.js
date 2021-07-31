@@ -1,7 +1,7 @@
 import MeetupList from '../components/meetups/MeetupList';
 import { MongoClient } from 'mongodb';
 
-function HompePage(props) {
+function HomePage(props) {
     return <MeetupList meetups={props.meetups} />;
 }
 
@@ -28,4 +28,4 @@ export async function getStaticProps() {
     };
 }
 
-export default HompePage;
+export default HomePage;

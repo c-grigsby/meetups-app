@@ -1,6 +1,6 @@
-import { useRouter } from 'next/router'; 
 import Card from '../ui/Card';
 import classes from './MeetupItem.module.css';
+import { useRouter } from 'next/router'; 
 
 const MeetupItem = (props) => {
   const router = useRouter(); 
