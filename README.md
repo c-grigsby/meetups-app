@@ -20,7 +20,7 @@
   </a>
 </p>
 
-# MeetUps App
+# MeetUps Application
 
 Web-application for sharing meetups
 
