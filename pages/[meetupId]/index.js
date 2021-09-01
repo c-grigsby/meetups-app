@@ -1,20 +1,28 @@
+import { Fragment } from 'react';
+import Head from 'next/head';
 import MeetupDetail from '../../components/meetups/MeetupDetail';
 import { MongoClient, ObjectId } from 'mongodb';
 
 const MeetUpDetails = ({ image, title, address, description }) => {
     return (
-        <MeetupDetail
-            address={address}
-            description={description}
-            image={image}
-            title={title}
-        />
+        <Fragment>
+            <Head>
+                <title>{title}</title>
+                <meta name='description' content={description} />
+            </Head>
+            <MeetupDetail
+                address={address}
+                description={description}
+                image={image}
+                title={title}
+            />
+        </Fragment>
     );
 };
 
 export async function getStaticPaths() {
     const client = await MongoClient.connect(
-        'mongodb+srv://chris:deC3ToZOX3LcJhwS@appdb.8lo9i.mongodb.net/MeetUpsDB?retryWrites=true&w=majority'
+        'mongodb+srv://chris:dgFssRV6NyWTFqjR@appdb.8lo9i.mongodb.net/MeetUpsDB?retryWrites=true&w=majority'
     );
     const db = client.db();
     const meetUpsCollection = db.collection('MeetUps');
@@ -35,11 +43,13 @@ export async function getStaticProps(context) {
     const meetupId = context.params.meetupId;
 
     const client = await MongoClient.connect(
-        'mongodb+srv://chris:deC3ToZOX3LcJhwS@appdb.8lo9i.mongodb.net/MeetUpsDB?retryWrites=true&w=majority'
+        'mongodb+srv://chris:dgFssRV6NyWTFqjR@appdb.8lo9i.mongodb.net/MeetUpsDB?retryWrites=true&w=majority'
     );
     const db = client.db();
     const meetUpsCollection = db.collection('MeetUps');
-    const selectedMeetup = await meetUpsCollection.findOne({ _id: ObjectId(meetupId) });
+    const selectedMeetup = await meetUpsCollection.findOne({
+        _id: ObjectId(meetupId),
+    });
     client.close();
 
     return {

@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import Card from '../ui/Card';
 import classes from './NewMeetupForm.module.css';
 
-const NewMeetupForm = ({onAddMeetup}) => {
+const NewMeetupForm = ({ onAddMeetup }) => {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
   const addressInputRef = useRef();
@@ -24,7 +24,7 @@ const NewMeetupForm = ({onAddMeetup}) => {
     };
     //send data to new-meetup
     onAddMeetup(meetupData);
-  }
+  };
 
   return (
     <Card>
@@ -34,7 +34,7 @@ const NewMeetupForm = ({onAddMeetup}) => {
           <input type='text' required id='title' ref={titleInputRef} />
         </div>
         <div className={classes.control}>
-          <label htmlFor='image'>Meetup Image</label>
+          <label htmlFor='image'>Meetup Image URL</label>
           <input type='url' required id='image' ref={imageInputRef} />
         </div>
         <div className={classes.control}>
@@ -47,8 +47,7 @@ const NewMeetupForm = ({onAddMeetup}) => {
             id='description'
             required
             rows='5'
-            ref={descriptionInputRef}
-          ></textarea>
+            ref={descriptionInputRef}></textarea>
         </div>
         <div className={classes.actions}>
           <button>Add Meetup</button>
@@ -56,6 +55,6 @@ const NewMeetupForm = ({onAddMeetup}) => {
       </form>
     </Card>
   );
-}
+};
 
 export default NewMeetupForm;
