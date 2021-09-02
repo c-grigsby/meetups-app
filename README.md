@@ -24,6 +24,8 @@
 
 Web-application for sharing meetups
 
+[Live Demo of MeetUps App](https://meetups-app-delta.vercel.app/)
+
 ## Project Specifications
 
 -   Full-stack framework built upon React
