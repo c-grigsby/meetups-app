@@ -22,7 +22,7 @@ const MeetUpDetails = ({ image, title, address, description }) => {
 
 export async function getStaticPaths() {
     const client = await MongoClient.connect(
-        'mongodb+srv://chris:dgFssRV6NyWTFqjR@appdb.8lo9i.mongodb.net/MeetUpsDB?retryWrites=true&w=majority'
+        `mongodb+srv://chris:${process.env.MONGO_DB_AUTH}@appdb.8lo9i.mongodb.net/MeetUpsDB?retryWrites=true&w=majority`
     );
     const db = client.db();
     const meetUpsCollection = db.collection('MeetUps');
@@ -30,7 +30,7 @@ export async function getStaticPaths() {
     client.close();
 
     return {
-        fallback: false,
+        fallback: 'blocking',
         paths: meetups.map((meetup) => ({
             params: {
                 meetupId: meetup._id.toString(),
@@ -43,7 +43,7 @@ export async function getStaticProps(context) {
     const meetupId = context.params.meetupId;
 
     const client = await MongoClient.connect(
-        'mongodb+srv://chris:dgFssRV6NyWTFqjR@appdb.8lo9i.mongodb.net/MeetUpsDB?retryWrites=true&w=majority'
+        `mongodb+srv://chris:${process.env.MONGO_DB_AUTH}@appdb.8lo9i.mongodb.net/MeetUpsDB?retryWrites=true&w=majority`
     );
     const db = client.db();
     const meetUpsCollection = db.collection('MeetUps');

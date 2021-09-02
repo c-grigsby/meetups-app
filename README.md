@@ -28,9 +28,9 @@ Web-application for sharing meetups
 
 -   Full-stack framework built upon React
 -   Persists data via [MongoDB](https://www.mongodb.com/)
--   API Routes for creating and fetching user data
--   Server-side rendering
 -   User defined meetup details and images
+-   API Routes for creating and fetching data
+-   Server-side rendering
 -   Deployed on Vercel
 
 ---
@@ -44,6 +44,8 @@ npm install
 # or
 yarn install
 ```
+
+Next, implement a new MongoDB connection string to index.js, meetupID/index.js, and api/new-meetup
 
 Then, run the development server:
 
