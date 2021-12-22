@@ -22,7 +22,7 @@
 
 # MeetUps Application
 
-Web-application for sharing meetups
+Front-end web-application for sharing social meetups
 
 [Live Demo of MeetUps App](https://meetups-app-delta.vercel.app/)
 
@@ -37,6 +37,17 @@ Web-application for sharing meetups
 
 ---
 
+#### This application utilizes .env.local file to host environment variables. To utilize configure:
+
+  - ##### MONGO_DB_AUTH="*YourMongoDBUserAuth*"
+
+---
+
+## Deployed URL
+  - https://meetups-app-delta.vercel.app/
+
+---
+
 ## Getting Started
 
 First, install dependencies:
@@ -46,8 +57,6 @@ npm install
 # or
 yarn install
 ```
-
-Next, implement a new MongoDB connection string to index.js, meetupID/index.js, and api/new-meetup
 
 Then, run the development server:
 
