@@ -26,25 +26,35 @@ Front-end web-application for sharing social meetups
 
 [Live Demo of MeetUps App](https://meetups-app-delta.vercel.app/)
 
+---
+
 ## Project Specifications
 
--   Full-stack framework built upon React
--   Persists data via [MongoDB](https://www.mongodb.com/)
--   User defined meetup details and images
--   API Routes for creating and fetching data
--   Server-side rendering
--   Deployed on Vercel
+- Developed with Next.js version 12.1.6
+- Next.js is full-stack framework built upon [React](https://reactjs.org/)
+- Persists data via [MongoDB](https://www.mongodb.com/)
+- User defined meetup details and images
+- API Routes for creating and fetching data
+- Server-side rendering
+- Deployed on [Vercel](https://vercel.com/)
+
+<div align="center">
+
+![Lines of code](https://img.shields.io/tokei/lines/github/c-grigsby/meetups-app?style=plastic)
+
+</div>
 
 ---
 
 #### This application utilizes .env.local file to host environment variables. To utilize configure:
 
-  - ##### MONGO_DB_AUTH="*YourMongoDBUserAuth*"
+- ##### MONGO_DB_AUTH="_YourMongoDBUserAuth_"
 
 ---
 
 ## Deployed URL
-  - https://meetups-app-delta.vercel.app/
+
+- https://meetups-app-delta.vercel.app/
 
 ---
 
@@ -66,14 +76,14 @@ npm run dev
 yarn dev
 ```
 
--   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
--   The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ---
 
 ## Deploy on Vercel
 
--   The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
--   Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
