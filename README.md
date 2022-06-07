@@ -30,7 +30,8 @@ Front-end web-application for sharing social meetups
 
 ## Project Specifications
 
-- Full-stack framework built upon React
+- Developed with Next.js version 12.1.6
+- Next.js is full-stack framework built upon [React](https://reactjs.org/)
 - Persists data via [MongoDB](https://www.mongodb.com/)
 - User defined meetup details and images
 - API Routes for creating and fetching data
